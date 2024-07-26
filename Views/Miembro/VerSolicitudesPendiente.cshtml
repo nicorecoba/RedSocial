@@ -1,0 +1,42 @@
+﻿@using Obligatorio2
+@using Biblioteca
+@model List<Miembro>
+
+<h1>Solicitudes Pendientes</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Miembro m in Model)
+        {
+            <tr>
+                <td>@m.Nombre</td>
+                <td>@m.Apellido</td>
+                <td><a href="@Url.Action("AceptarORechazarSolitud","Miembro", new {email = m.Email, opcion = "ACEPTAR"})" class="btn btn-primary">Aceptar</a></td>
+                <td><a href="@Url.Action("AceptarORechazarSolitud","Miembro", new {email = m.Email, opcion = "RECHAZAR"})" class= "btn btn-danger">Rechazar</a></td>
+            </tr>
+            
+        }
+    </tbody>
+</table>
+<div>
+    @if(TempData["error"] != null)
+            {
+                if(!(bool)TempData["error"])
+                {
+                    <div class="alert alert-success" role="alert">
+                        <p>@TempData["Mensaje"] </p>
+                    </div>
+                } else if((bool)TempData["error"])
+                {
+                    <div class="alert alert-danger" role="alert">
+                        @TempData["Mensaje"]
+                    </div>
+                }
+            }
+</div>

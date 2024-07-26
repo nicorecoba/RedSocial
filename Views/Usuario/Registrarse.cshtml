@@ -1,0 +1,56 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1>Registrar Usuario</h1>
+<form action="/Usuario/ValidarRegistro" method="post">
+    <div class="mb-3 row">
+        <label for="Email" class="col-sm-2 col-form-label">Ingrese un email</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="Email" name="Email">
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Ingrese una contraseña</label>
+        <div class="col-sm-10">
+            <input type="password" class="form-control" id="Contraseña" name="Contraseña">
+        </div>
+    </div>
+    
+    <div class="mb-3 row">
+        <label for="nombre" class="col-sm-2 col-form-label">Ingrese su nombre</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="Nombre" name="Nombre">
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <label for="apellido" class="col-sm-2 col-form-label">Ingrese su apellido</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="Apellido" name="Apellido">
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <label for="fechaNacimiento" class="col-sm-2 col-form-label">Ingrese su fecha de Nacimiento</label>
+        <div class="col-sm-10">
+            <input type="date" class="form-control" id="FechaNacimiento" name="FechaNacimiento">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Registrarse</button>
+</form>
+
+@if(TempData["error"] != null)
+{
+    if(!(bool)TempData["error"])
+    {
+        <div class="alert alert-success" role="alert">
+            Usuario Logueado Correctamente
+        </div>
+        <a class="btn btn-light" href="@Url.Action("Index","InicioSesion")">Iniciar Sesión</a>
+    } else
+    {
+        <div class="alert alert-danger" role="alert">
+            @TempData["MensajeError"];
+        </div>
+    }
+}

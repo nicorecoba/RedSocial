@@ -1,0 +1,47 @@
+﻿@using Obligatorio2
+@using Biblioteca
+@model List<Post>
+
+<h1>Bienvenido a las publicaciones</h1>
+<h2>Post</h2>
+@foreach(Post posts in Model){
+     <div class="card mb-3">
+       <figure>
+            <img src="@("/Images/" + posts.NombreImagen)" class="card-img-top" alt="Imagen">
+
+        </figure> 
+        <div class="card-body">
+            <h3 class="card-title">@posts.Titulo</h3>
+            <p class="card-text">@posts.Texto</p>
+            <p class="card-text"><small class="text-body-secondary">Likes: @posts.like DisLikes: @posts.dislike</small></p>
+            <p>Comentarios: @posts.Comentarios.Count() <a class="btn btn-info" href="@Url.Action("ListarComentarios", new {id = posts.Id})">Ver Comentarios</a></p>
+            @if (@posts.Baneado)
+            {
+                <a class="btn btn-success" href="@Url.Action("BanearPublicaciones", new{id = @posts.Id, opc = "DESBLOQUEAR"})">Desbloquear Post</a>
+            }
+            else
+            {
+                <a class="btn btn-danger" href="@Url.Action("BanearPublicaciones", new{id = @posts.Id, opc = "BLOQUEAR"})">Bloquear Post</a>
+            }
+        </div>
+        </div>
+
+}
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+        // Recuperar la posición de desplazamiento desde el almacenamiento local
+        var scrollPosition = localStorage.getItem('scrollPosition') || 0;
+
+        // Establecer la posición de desplazamiento al cargar la página
+        $(window).scrollTop(scrollPosition);
+
+        // Manejar eventos de recarga para guardar la posición de desplazamiento
+        $(window).on('beforeunload', function () {
+            localStorage.setItem('scrollPosition', $(window).scrollTop());
+        });
+    });
+</script>

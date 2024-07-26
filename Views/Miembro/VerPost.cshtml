@@ -1,0 +1,181 @@
+﻿@using Obligatorio2
+
+
+@using Biblioteca
+@model List<Post>
+
+<form asp-action="ListarPostSeleccionados" method="post" enctype="multipart/form-data">
+
+    <div class="make-container">
+        <h2>
+            Ingrese un texto y un numero para listar Posts y/o comentarios que contengan ese texto siempre que
+            tengan un valor de aceptación superior al número ingresado.
+        </h2>
+
+        <div class="mb-3 row">
+            <label for="texto" class="col-sm-2 col-form-label">Ingrese un texto: </label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="texto" name="texto">
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="mb-3 row">
+        <label for="valorAceptacion" class="col-sm-2 col-form-label">Ingrese un valor de aceptacion: </label>
+        <div class="col-sm-10">
+            <input type="number" class="form-control" id="valorAceptacion" name="valorAceptacion">
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Mostrar</button>
+</form>
+
+ @if (TempData["errorListar"]!= null)
+{
+    <div class="alert alert-danger" role="alert">
+        <p>Debe ingresar un texto</p>
+    </div>   
+} 
+
+@* <a href="@Url.Action("RealizarPost")" type="button" class="btn btn-light">Realizar Post</a> *@
+
+<!-- Otras secciones de la vista -->
+@if (Model != null)
+{
+    <h2>Posts</h2>
+    <hr />
+    <div>
+        @foreach (Post post in Model)
+        {
+            <div class="card mb-3">
+                <figure>
+                    <img src="@("/Images/" + post.NombreImagen)" class="card-img-top" alt="...">
+                </figure>
+           
+                <div class="card-body">
+                    <h3 class="card-title">@post.Titulo</h3>
+                    <p class="card-text">@post.Texto</p>
+                    <p class="card-text">
+                        <small class="text-body-secondary">
+                            <p>Like: @post.cantLike()</p>
+                            <a href="@Url.Action("Like","Miembro", new{Id = post.Id})" class="btn btn-primary">Like</a>
+
+                            <p>Dislike: @post.cantDisLike()</p>
+                            <a href="@Url.Action("Dislike","Miembro", new{Id = post.Id})" class="btn btn-primary">Dislike</a>
+
+                            <p>Valor de aceptacion: @post.ValorAceptacion();</p>
+                        </small>
+                    </p>
+                </div>
+            </div>
+            <div>
+               <h3>Comentarios</h3>
+               
+               <div class="d-flex justify-content-start">
+                @foreach (Comentario Co in post.Comentarios)
+                {
+                    <div class="row row-cols-1 row-cols-md-2 g-4 ">
+                        
+                    <div class="card text-bg-light mb-3 card-body" style="max-width: 18rem;">
+                        <div class="card-header">Comentario:</div>
+                        <div class="card-body">
+                            <h4 class="card-title">@Co.Titulo</h4>
+                            <p class="card-text">@Co.Texto</p
+                                <p class="card-text">Like: @Co.cantLike()</p>
+                                 <a href="@Url.Action("Like","Miembro", new{Id = Co.Id})" class="btn btn-primary">Like</a>
+                                <p class="card-text">Dislike: @Co.cantDisLike()</p>
+                                <a href="@Url.Action("Dislike","Miembro", new{Id = Co.Id})" class="btn btn-primary">Dislike</a> 
+                        </div>
+                    </div>
+                    
+                    </div>
+           
+                }
+                </div>
+                
+                @if (TempData["MensajeError"] != null)
+                {
+                    if (!(bool)TempData["MensajeError"])
+                    {
+                        <p>@TempData["Mensaje"]</p>
+                    }
+                    else
+                    {
+                        <p>@TempData["Mensaje"]</p>
+                    }
+                }
+                <form action="/Miembro/Comentar" method="post">
+                    <p>Comentar</p>
+
+                    <p>Titulo: </p>
+
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="Comentario" name="titulo">
+                    </div>
+
+                    <p>Contenido: </p>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="Comentario" name="texto">
+                    </div>
+
+                    <div>
+                        <input type="hidden" name="Id" value="@post.Id">
+                    </div>
+
+
+                    <button type="submit" class="btn btn-primary">Comentar</button>
+                </form>
+
+
+                @* @if (TempData["IdPost"].Equals(@post.Id))
+
+        @if (TempData["error"] != null)
+        {
+        @if (!(bool)TempData["error"])
+        {
+        <div class="alert alert-success" role="alert">
+        Comentario dado de alta correctamente
+        </div>
+        }
+        else
+        {
+        <div class="alert alert-danger" role="alert">
+        @TempData["MensajeError"];
+        </div>
+        }
+        } *@
+            </div>
+
+            <hr /> <!-- Línea divisoria entre posts -->
+        }
+
+
+    </div>
+}
+else
+{
+    <p>No hay posts para mostrar.</p>
+}
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
+
+<script>
+    $(document).ready(function () {
+        // Recuperar la posición de desplazamiento desde el almacenamiento local
+        var scrollPosition = localStorage.getItem('scrollPosition') || 0;
+
+        // Establecer la posición de desplazamiento al cargar la página
+        $(window).scrollTop(scrollPosition);
+
+        // Manejar eventos de recarga para guardar la posición de desplazamiento
+        $(window).on('beforeunload', function () {
+            localStorage.setItem('scrollPosition', $(window).scrollTop());
+        });
+    });
+</script>

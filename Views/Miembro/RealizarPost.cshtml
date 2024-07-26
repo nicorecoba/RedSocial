@@ -1,0 +1,64 @@
+﻿@using Obligatorio2
+
+@using Biblioteca
+@model Miembro
+
+@if (!Model.Bloqueado)
+{
+    
+    <h1>Realizar Post</h1>   
+
+        <form action="/Miembro/PublicarPost" method="post" enctype="multipart/form-data">
+
+            <div class="mb-3 row">
+                <label for="Titulo" class="col-sm-2 col-form-label">Titulo</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="Titulo" name="Titulo">
+                </div>
+            </div>
+
+            <div class="mb-3 row">
+                <label for="Contenido" class="col-sm-2 col-form-label">Contenido</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="Contenido" name="Texto">
+                </div>
+            </div>
+                     
+            <div class="">
+            <label for="privado">Privado</label>
+            <select id="privado" name="Privado">
+                <option value="true">Si</option>
+                <option value="false">No</option>
+            </select>
+            </div>
+
+
+            <div class="mb-3 row">
+                <label for="Imagen" class="col-sm-2 col-form-label">Imagen</label>
+                <div class="col-sm-10">
+                    <input type="file" class="form-control" id="Imagen" name="file">
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Publicar</button>
+        </form>
+    @if(TempData["error"] != null)
+    {
+        if (!(bool)TempData["error"])
+        {
+            <p class="alert alert-success">@TempData["Mensaje"]</p>
+        } else
+        {
+            <p class="alert alert-danger">@TempData["MensajeError"]</p>
+        }
+    }
+
+
+}
+else
+{
+    <div class="alert alert-danger" role="alert">
+       El usuario @Model.Nombre esta bloqueado y no puede realizar un post
+    </div>
+}
+ 

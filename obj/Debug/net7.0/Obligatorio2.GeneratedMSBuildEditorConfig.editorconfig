@@ -1,0 +1,107 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Obligatorio2
+build_property.RootNamespace = Obligatorio2
+build_property.ProjectDir = C:\Users\Rafael\Desktop\Rafa\ORT\clases\2do semestre\Programacion 2\Obligatorio 2\Entrega de proyecto final\ObligatorioFinal\Obligatorio2\Obligatorio2\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Rafael\Desktop\Rafa\ORT\clases\2do semestre\Programacion 2\Obligatorio 2\Entrega de proyecto final\ObligatorioFinal\Obligatorio2\Obligatorio2
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Rafael/Desktop/Rafa/ORT/clases/2do semestre/Programacion 2/Obligatorio 2/Entrega de proyecto final/ObligatorioFinal/Obligatorio2/Obligatorio2/Views/Administrador/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYWRvclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rafael/Desktop/Rafa/ORT/clases/2do semestre/Programacion 2/Obligatorio 2/Entrega de proyecto final/ObligatorioFinal/Obligatorio2/Obligatorio2/Views/Administrador/ListarComentarios.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYWRvclxMaXN0YXJDb21lbnRhcmlvcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rafael/Desktop/Rafa/ORT/clases/2do semestre/Programacion 2/Obligatorio 2/Entrega de proyecto final/ObligatorioFinal/Obligatorio2/Obligatorio2/Views/Administrador/ListarMiembros.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYWRvclxMaXN0YXJNaWVtYnJvcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rafael/Desktop/Rafa/ORT/clases/2do semestre/Programacion 2/Obligatorio 2/Entrega de proyecto final/ObligatorioFinal/Obligatorio2/Obligatorio2/Views/Administrador/ListarPublicaciones.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYWRvclxMaXN0YXJQdWJsaWNhY2lvbmVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rafael/Desktop/Rafa/ORT/clases/2do semestre/Programacion 2/Obligatorio 2/Entrega de proyecto final/ObligatorioFinal/Obligatorio2/Obligatorio2/Views/Error/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rafael/Desktop/Rafa/ORT/clases/2do semestre/Programacion 2/Obligatorio 2/Entrega de proyecto final/ObligatorioFinal/Obligatorio2/Obligatorio2/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rafael/Desktop/Rafa/ORT/clases/2do semestre/Programacion 2/Obligatorio 2/Entrega de proyecto final/ObligatorioFinal/Obligatorio2/Obligatorio2/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rafael/Desktop/Rafa/ORT/clases/2do semestre/Programacion 2/Obligatorio 2/Entrega de proyecto final/ObligatorioFinal/Obligatorio2/Obligatorio2/Views/InicioSesion/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5pY2lvU2VzaW9uXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rafael/Desktop/Rafa/ORT/clases/2do semestre/Programacion 2/Obligatorio 2/Entrega de proyecto final/ObligatorioFinal/Obligatorio2/Obligatorio2/Views/Miembro/ComentariosPost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWllbWJyb1xDb21lbnRhcmlvc1Bvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rafael/Desktop/Rafa/ORT/clases/2do semestre/Programacion 2/Obligatorio 2/Entrega de proyecto final/ObligatorioFinal/Obligatorio2/Obligatorio2/Views/Miembro/Inicio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWllbWJyb1xJbmljaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rafael/Desktop/Rafa/ORT/clases/2do semestre/Programacion 2/Obligatorio 2/Entrega de proyecto final/ObligatorioFinal/Obligatorio2/Obligatorio2/Views/Miembro/ListarPostSeleccionados.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWllbWJyb1xMaXN0YXJQb3N0U2VsZWNjaW9uYWRvcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rafael/Desktop/Rafa/ORT/clases/2do semestre/Programacion 2/Obligatorio 2/Entrega de proyecto final/ObligatorioFinal/Obligatorio2/Obligatorio2/Views/Miembro/MostrarMiembros.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWllbWJyb1xNb3N0cmFyTWllbWJyb3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rafael/Desktop/Rafa/ORT/clases/2do semestre/Programacion 2/Obligatorio 2/Entrega de proyecto final/ObligatorioFinal/Obligatorio2/Obligatorio2/Views/Miembro/RealizarPost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWllbWJyb1xSZWFsaXphclBvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rafael/Desktop/Rafa/ORT/clases/2do semestre/Programacion 2/Obligatorio 2/Entrega de proyecto final/ObligatorioFinal/Obligatorio2/Obligatorio2/Views/Miembro/VerPost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWllbWJyb1xWZXJQb3N0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rafael/Desktop/Rafa/ORT/clases/2do semestre/Programacion 2/Obligatorio 2/Entrega de proyecto final/ObligatorioFinal/Obligatorio2/Obligatorio2/Views/Miembro/VerSolicitudesPendiente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWllbWJyb1xWZXJTb2xpY2l0dWRlc1BlbmRpZW50ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rafael/Desktop/Rafa/ORT/clases/2do semestre/Programacion 2/Obligatorio 2/Entrega de proyecto final/ObligatorioFinal/Obligatorio2/Obligatorio2/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rafael/Desktop/Rafa/ORT/clases/2do semestre/Programacion 2/Obligatorio 2/Entrega de proyecto final/ObligatorioFinal/Obligatorio2/Obligatorio2/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rafael/Desktop/Rafa/ORT/clases/2do semestre/Programacion 2/Obligatorio 2/Entrega de proyecto final/ObligatorioFinal/Obligatorio2/Obligatorio2/Views/Usuario/Inicio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xJbmljaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rafael/Desktop/Rafa/ORT/clases/2do semestre/Programacion 2/Obligatorio 2/Entrega de proyecto final/ObligatorioFinal/Obligatorio2/Obligatorio2/Views/Usuario/Registrarse.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xSZWdpc3RyYXJzZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rafael/Desktop/Rafa/ORT/clases/2do semestre/Programacion 2/Obligatorio 2/Entrega de proyecto final/ObligatorioFinal/Obligatorio2/Obligatorio2/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rafael/Desktop/Rafa/ORT/clases/2do semestre/Programacion 2/Obligatorio 2/Entrega de proyecto final/ObligatorioFinal/Obligatorio2/Obligatorio2/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rafael/Desktop/Rafa/ORT/clases/2do semestre/Programacion 2/Obligatorio 2/Entrega de proyecto final/ObligatorioFinal/Obligatorio2/Obligatorio2/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-ib9qoncdfx

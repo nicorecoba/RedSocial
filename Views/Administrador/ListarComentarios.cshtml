@@ -1,0 +1,35 @@
+﻿@using Obligatorio2
+@using Biblioteca
+@model List<Comentario>
+
+<h1>Comentarios del post @ViewBag.Post</h1>
+<div class="d-flex justify-content-start">
+@foreach(Comentario c in Model)
+{
+     
+                
+                
+                    <div class="row row-cols-1 row-cols-md-2 g-4 ">
+                        
+                    <div class="card text-bg-light mb-3 card-body" style="max-width: 18rem;">
+                        <div class="card-header">Comentario:</div>
+                        <div class="card-body">
+                            <h4 class="card-title">@c.Titulo</h4>
+                            <p class="card-text">@c.Texto</p>
+                    <p>Autor: @c.Autor.Nombre @c.Autor.Apellido</p>
+                                <p class="card-text">Like: @c.cantLike()</p>
+                                 
+                                <p class="card-text">Dislike: @c.cantDisLike()</p>
+                                
+                        </div>
+                    </div>
+                    
+                    </div>
+           
+                
+                
+  
+
+}
+</div>
+

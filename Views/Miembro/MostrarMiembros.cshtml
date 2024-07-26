@@ -1,0 +1,34 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@using Obligatorio2
+@using Biblioteca
+@model List<Miembro>
+
+<h1>Personas que quizas conozcas</h1>
+<table class="table table-striped-columns">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Enviar Invitación</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(Miembro m in Model)
+        {
+            <tr>
+                <td>@m.Nombre</td>
+                <td>@m.Apellido</td>
+                <td>
+                    <a href="@Url.Action("EnviarInvitacion","Miembro", new{email = m.Email})" class="btn btn-primary">Enviar Solicitud</a>
+
+
+                </td>
+            </tr>
+        }
+    </tbody>
+    @if (TempData["Mensaje"] != null) {<p>@TempData["Mensaje"]</p>}
+</table>

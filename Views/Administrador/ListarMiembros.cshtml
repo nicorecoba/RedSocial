@@ -1,0 +1,62 @@
+﻿@using Obligatorio2
+@using Biblioteca
+@model List<Miembro>
+
+
+<h1>Lista de Miembros</h1>
+<table class = "table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>
+                Nombre
+            </th>
+            <th>
+                Apellido
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(Miembro miembros in Model)
+        {
+            <tr>
+                <td>
+                    @miembros.Nombre
+                </td>
+                <td>
+                    @miembros.Apellido
+                </td>
+                @if (miembros.Bloqueado)
+                {
+                    <td>
+                        <a class ="btn btn-primary" href="@Url.Action("BloquearODesbloquear","Administrador", new{Email =@miembros.Email, opc = "DESBLOQUEAR"})">Desbloquear</a>
+                    </td>
+                }
+                else
+                {
+                    <td>
+                        <a class = "btn btn-danger" href="@Url.Action("BloquearODesbloquear","Administrador", new{Email =@miembros.Email, opc = "BLOQUEAR"})">Bloquear</a>
+                    </td>
+                }
+                
+                
+            </tr>
+        }    
+    </tbody>
+</table>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        // Recuperar la posición de desplazamiento desde el almacenamiento local
+        var scrollPosition = localStorage.getItem('scrollPosition') || 0;
+
+        // Establecer la posición de desplazamiento al cargar la página
+        $(window).scrollTop(scrollPosition);
+
+        // Manejar eventos de recarga para guardar la posición de desplazamiento
+        $(window).on('beforeunload', function () {
+            localStorage.setItem('scrollPosition', $(window).scrollTop());
+        });
+    });
+</script>
